@@ -2,20 +2,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: demo-dep
+  name: demo-azfs-ps-dep
   namespace: default
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: demo
+      app: demo-azfs-ps
   template:
     metadata:
       labels:
-        app: demo
+        app: demo-azfs-ps
     spec:
       containers:
-      - name: demo
+      - name: demo-azfs-ps
         image: httpd:latest
         ports:
         - containerPort: 80
@@ -32,7 +32,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: demo-np
+  name: demo-azfs-ps-np
   namespace: default
 spec:
   type: NodePort
@@ -40,12 +40,12 @@ spec:
   - port: 80
     name: http
   selector:
-    app: demo
+    app: demo-azfs-ps
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: demo-lb
+  name: demo-azfs-ps-lb
   namespace: default
 spec:
   type: LoadBalancer
@@ -54,4 +54,4 @@ spec:
     targetPort: 80
     name: http
   selector:
-    app: demo
+    app: demo-azfs-ps
