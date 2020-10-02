@@ -24,19 +24,19 @@ git clone https://github.com/adminph-de/k8s-examples.git
 ### Apply the YAML files
 
 ```bash
-kubectl apply -f afs-ps-static-secret.yaml
+> kubectl apply -f afs-ps-static-secret.yaml
 ```
 
 ```bash
-kubectl apply -f azf-ps-static.yaml
+> kubectl apply -f azf-ps-static.yaml
 ```
 
 
 ### Checking the deployment
 
 ```bash
-kubectl get all
-```
+> kubectl get all
+
 
 NAME                               READY   STATUS    RESTARTS   AGE
 pod/azfs-ps-dep-859db88c56-t5gw4   1/1     Running   0          106m
@@ -50,3 +50,4 @@ deployment.apps/azfs-ps-dep   1/1     1            1           106m
 
 NAME                                     DESIRED   CURRENT   READY   AGE
 replicaset.apps/azfs-ps-dep-859db88c56   1         1         1       106m
+```
