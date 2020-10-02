@@ -81,16 +81,18 @@ data:
 > kubectl get all
 
 
-NAME                               READY   STATUS    RESTARTS   AGE
-pod/azfs-ps-dep-859db88c56-t5gw4   1/1     Running   0          106m
+NAME                                    READY   STATUS    RESTARTS   AGE
+pod/demo-azfs-ps-dep-859db88c56-t5gw4   1/1     Running   0          106m
 
-NAME                 TYPE           CLUSTER-IP    EXTERNAL-IP      PORT(S)        AGE
-service/azfs-ps-lb   LoadBalancer   10.0.177.19   52.157.223.218   80:31439/TCP   106m
-service/azfs-ps-np   NodePort       10.0.55.62    <none>           80:30803/TCP   106m
+NAME                      TYPE           CLUSTER-IP    EXTERNAL-IP      PORT(S)        AGE
+service/demo-azfs-ps-lb   LoadBalancer   10.0.177.19   52.157.223.218   80:31439/TCP   106m
+service/demo-azfs-ps-np   NodePort       10.0.55.62    <none>           80:30803/TCP   106m
 
-NAME                          READY   UP-TO-DATE   AVAILABLE   AGE
-deployment.apps/azfs-ps-dep   1/1     1            1           106m
+NAME                               READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/demo-azfs-ps-dep   1/1     1            1           106m
 
-NAME                                     DESIRED   CURRENT   READY   AGE
-replicaset.apps/azfs-ps-dep-859db88c56   1         1         1       106m
+NAME                                         DESIRED   CURRENT   READY   AGE
+replicaset.apps/demo-azfs-ps-dep-859db88c56   1         1         1       106m
 ```
+
+ID-, IPs, etc. will be different from your deployment.
