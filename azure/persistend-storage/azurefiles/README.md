@@ -1,8 +1,8 @@
 # AzureFiles as persistent storage mount (Static)
 
 > This example creates an [Apache2](https://hub.docker.com/_/httpd) POD on your Kubernetes Cluster 
-and attaches an Azure StorrageAccount's share (wwwroot) to the POD. 
-It demonstrates a persistent volume mount to a static created Azure StorrageAccount. 
+and attaches the share (wwwroot) of an Azuer StorageAccount to the POD. 
+It demonstrates a persistent volume mount (AzuerFiles) to a static created Azure StorageAccount. 
 Check the [References](#References) at the end of the document for more information.
 
 ## Folder Structure
@@ -62,9 +62,10 @@ AKS_PERS_LOCATION=westeurope
 * Storage account key : 1JIUQD+YB0kJ0Dl2Yq+OiUUc61ZpiTppqgPWtx28CymfFgtIuLkWEe4evK7iv+oP0bhEgz3D1jUPCTOALanc4SQ==
 ```
 
-> Use your prefered way of upload the demo content files
-(as example [Azure Storrage Explorer](https://azure.microsoft.com/en-us/features/storage-explorer/))
-into the *wwwroot* share of the new created StorrageAccount
+> Use your preferred way of upload the demo content files 
+(for example, [Azure Storage Explorer](https://azure.microsoft.com/en-us/features/storage-explorer/))
+into the wwwroot share of the new created StorageAccount
+
 ```bash
 .
 └── wwwroot
