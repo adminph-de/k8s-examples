@@ -105,8 +105,9 @@ data:
 
 ```bash
 > kubectl get all
-
-
+```
+> Output:
+```bash
 NAME                                    READY   STATUS    RESTARTS   AGE
 pod/demo-azfs-ps-dep-859db88c56-t5gw4   1/1     Running   0          106m
 
