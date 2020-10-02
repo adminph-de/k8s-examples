@@ -1,8 +1,9 @@
 # AzureFiles as persistent storage mount (Static)
 
 > This example creates an [Apache2](https://hub.docker.com/_/httpd) POD on your Kubernetes Cluster 
-and attaches an Azuer StorrageAccount's share (wwwroot) to the POD. 
-It demonstrate persistent volume mount to a static created Azure StorrageAccount. 
+and attaches an Azure StorrageAccount's share (wwwroot) to the POD. 
+It demonstrates a persistent volume mount to a static created Azure StorrageAccount. 
+Check the [References](#References) at the end of the document for more information.
 
 ## Folder Structure
 
@@ -40,26 +41,26 @@ It demonstrate persistent volume mount to a static created Azure StorrageAccount
 git clone https://github.com/adminph-de/k8s-examples.git
 ```
 
-### Create the storage account and uplad demo content
+### Create the storage account and upload demo content
 
-> Modify Variables:
+> Modify Variables
 ```bash
 AKS_PERS_RESOURCE_GROUP=MyResourceGroup
 AKS_PERS_LOCATION=westeurope
 ```
 
-> Run the script:
+> Run the script
 ```bash
 > .create.sh
 ```
 
-> Script output (example):
+> Script output (example)
 ```bash
 * Storage account name: k8s27459
 * Storage account key : 1JIUQD+YB0kJ0Dl2Yq+OiUUc61ZpiTppqgPWtx28CymfFgtIuLkWEe4evK7iv+oP0bhEgz3D1jUPCTOALanc4SQ==
 ```
 
-> Use your prefered way of upload the demo content files 
+> Use your prefered way of upload the demo content files
 (as example [Azure Storrage Explorer](https://azure.microsoft.com/en-us/features/storage-explorer/))
 into the *wwwroot* share of the new created StorrageAccount
 ```bash
@@ -73,7 +74,7 @@ into the *wwwroot* share of the new created StorrageAccount
 
 ### Modfiy *afs-ps-static-secret.yaml* (=Kubernetes Secret)
 
-> Convert Storage Account Name and Key into *base64* string:
+> Convert Storage Account Name and Key into *base64* string
 ```bash
 echo -n 'k8s27459' | base64
 * OUTPUT: azhzMjc0NTk=
@@ -121,3 +122,10 @@ deployment.apps/demo-azfs-ps-dep   1/1     1            1           106m
 NAME                                         DESIRED   CURRENT   READY   AGE
 replicaset.apps/demo-azfs-ps-dep-859db88c56   1         1         1       106m
 ```
+
+## References
+
+* [kubectl Cheat Sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
+* [Kubernetes Storage Classes](https://kubernetes.io/docs/concepts/storage/storage-classes/#azure-file)
+* [Manually create and use a volume with Azure Files share in Azure Kubernetes Service (AKS)](https://docs.microsoft.com/en-us/azure/aks/azure-files-volume)
+* [Storage options for applications in Azure Kubernetes Service (AKS)](https://docs.microsoft.com/en-us/azure/aks/concepts-storage)
