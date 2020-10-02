@@ -24,7 +24,7 @@ Check the [References](#References) at the end of the document for more informat
 
 | FOLDER  | FILE                          | Desctiption                         | 
 |:--------|:------------------------------|:------------------------------------|
-| .       | **LICENSE**                   | MIT license file                    |
+| .       | **LICENSE**                   | [MIT](https://choosealicense.com/licenses/mit/) license file |
 | .       | **README.md**                 | This Readme file                    |
 | .       | **azf-ps-static-secret.yaml** | K8s Secret YAML file                |
 | .       | **azf-ps-static.yaml**        | k8s Deployment YAML file            |
@@ -131,26 +131,3 @@ replicaset.apps/demo-azfs-ps-dep-859db88c56   1         1         1       106m
 * [Kubernetes Storage Classes](https://kubernetes.io/docs/concepts/storage/storage-classes/#azure-file)
 * [Manually create and use a volume with Azure Files share in Azure Kubernetes Service (AKS)](https://docs.microsoft.com/en-us/azure/aks/azure-files-volume)
 * [Storage options for applications in Azure Kubernetes Service (AKS)](https://docs.microsoft.com/en-us/azure/aks/concepts-storage)
-
-
-## [MIT](https://choosealicense.com/licenses/mit/) License
-
-Copyright (c) 2020 Patrick Hayo
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
