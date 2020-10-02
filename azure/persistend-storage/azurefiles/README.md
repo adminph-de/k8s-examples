@@ -12,9 +12,16 @@
 
 ## Usage
 
+### Clone the Repository
+
 ```bash
 git clone https://github.com/adminph-de/k8s-examples.git
 ```
+
+### Create the storage account
+
+
+### Apply the YAML files
 
 ```bash
 kubectl apply -f afs-ps-static-secret.yaml
@@ -23,7 +30,9 @@ kubectl apply -f afs-ps-static-secret.yaml
 ```bash
 kubectl apply -f azf-ps-static.yaml
 ```
-## Result
+
+
+### Checking the deployment
 
 ```bash
 kubectl get all
