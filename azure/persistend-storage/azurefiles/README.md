@@ -3,12 +3,24 @@
 ## Folder Structure
 
 ```bash
+.
 ├── README.md
 ├── azf-ps-static-secret.yaml
 ├── azf-ps-static.yaml
-├── commands.sh
-└── setup-storrage-account.sh
+└── create.sh
 ```
+
+| FOLDER  | FILE                          | Desctiption                       | 
+|:--------|:------------------------------|:----------------------------------|
+| .       | **README.md**                 | This Readme File                  |
+|:--------|:------------------------------|:----------------------------------|
+| .       | **azf-ps-static-secret.yaml** | K8s Secret YAML file              |
+|:--------|:------------------------------|:----------------------------------|
+| .       | **azf-ps-static.yaml**        | k8s Deployment YAML file          |
+|:--------|:------------------------------|:----------------------------------|
+| .       | **create.sh**                 | Create new Azure Storrage Account |
+|:--------|:------------------------------------------------------------------|
+
 
 ## Usage
 
@@ -44,6 +56,7 @@ AKS_PERS_SHARE_NAME=myshare
 ```bash
 echo -n 'k8s27459' | base64
 * OUTPUT: azhzMjc0NTk=
+
 echo -n '1JIUQD+YB0kJ0Dl2Yq+OiUUc61ZpiTppqgPWtx28CymfFgtIuLkWEe4evK7iv+oP0bhEgz3D1jUPCTOALanc4SQ==' | base64
 * OUTPUT: MUpJVVFEK1lCMGtKMERsMllxK09pVVVjNjFacGlUcHBxZ1BXdHgyOEN5bWZGZ3RJdUxrV0VlNGV2SzdpditvUDBiaEVnejNEMWpVUENUT0FMYW5jNFNRPT0=
 ```
