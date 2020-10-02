@@ -1,5 +1,9 @@
 # AzureFiles as persistent storage mount (Static)
 
+> This example creates an Apache2 (httpd) POD on your Kubernetes Cluster 
+and attaches an Azuer StorrageAccount's share (wwwroot) to the POD. 
+It demonstrate persistent volume mount to a static created Azure StorrageAccount. 
+
 ## Folder Structure
 
 ```bash
@@ -7,15 +11,25 @@
 ├── README.md
 ├── azf-ps-static-secret.yaml
 ├── azf-ps-static.yaml
-└── create.sh
+├── create.sh
+└── wwwroot
+    ├── index.html
+    ├── logo.png
+    ├── script.js
+    └── style.css
+
 ```
 
-| FOLDER  | FILE                          | Desctiption                       | 
-|:--------|:------------------------------|:----------------------------------|
-| .       | **README.md**                 | This Readme File                  |
-| .       | **azf-ps-static-secret.yaml** | K8s Secret YAML file              |
-| .       | **azf-ps-static.yaml**        | k8s Deployment YAML file          |
-| .       | **create.sh**                 | create new Azure Storrage Account |
+| FOLDER  | FILE                          | Desctiption                         | 
+|:--------|:------------------------------|:------------------------------------|
+| .       | **README.md**                 | This Readme File                    |
+| .       | **azf-ps-static-secret.yaml** | K8s Secret YAML file                |
+| .       | **azf-ps-static.yaml**        | k8s Deployment YAML file            |
+| .       | **create.sh**                 | create new Azure Storrage Account   |
+| wwwroot | **index.html**                | Examle content for Apache Webserver |
+| wwwroot | **clogo.png**                 | Examle content for Apache Webserver |
+| wwwroot | **script.js**                 | Examle content for Apache Webserver |
+| wwwroot | **style.css**                 | Examle content for Apache Webserver |
 
 
 ## Usage
@@ -26,13 +40,12 @@
 git clone https://github.com/adminph-de/k8s-examples.git
 ```
 
-### Create the storage account
+### Create the storage account and uplad demo content
 
 > Modify Variables:
 ```bash
 AKS_PERS_RESOURCE_GROUP=MyResourceGroup
 AKS_PERS_LOCATION=westeurope
-AKS_PERS_SHARE_NAME=myshare
 ```
 
 > Run the script:
@@ -44,6 +57,18 @@ AKS_PERS_SHARE_NAME=myshare
 ```bash
 * Storage account name: k8s27459
 * Storage account key : 1JIUQD+YB0kJ0Dl2Yq+OiUUc61ZpiTppqgPWtx28CymfFgtIuLkWEe4evK7iv+oP0bhEgz3D1jUPCTOALanc4SQ==
+```
+
+> Use your prefered way of upload the demo content files 
+(as example [Azure Storrage Explorer](https://azure.microsoft.com/en-us/features/storage-explorer/))
+into the *wwwroot* share of the new created StorrageAccount
+```bash
+.
+└── wwwroot
+    ├── index.html
+    ├── logo.png
+    ├── script.js
+    └── style.css
 ```
 
 ### Modfiy *afs-ps-static-secret.yaml* (=Kubernetes Secret)

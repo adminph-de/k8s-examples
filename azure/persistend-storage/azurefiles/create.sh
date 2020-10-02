@@ -3,7 +3,7 @@
 
 # Change these four parameters as needed for your own environment
 AKS_PERS_STORAGE_ACCOUNT_NAME=k8s$RANDOM
-AKS_PERS_RESOURCE_GROUP=k8s-aks-cluster-t
+AKS_PERS_RESOURCE_GROUP=MyResourceGroup
 AKS_PERS_LOCATION=westeurope
 AKS_PERS_SHARE_NAME=wwwroot
 
