@@ -101,6 +101,7 @@ data:
 
 
 ### Checking the deployment
+***ID-, IPs, etc. will be different from your deployment***
 
 ```bash
 > kubectl get all
@@ -119,5 +120,3 @@ deployment.apps/demo-azfs-ps-dep   1/1     1            1           106m
 NAME                                         DESIRED   CURRENT   READY   AGE
 replicaset.apps/demo-azfs-ps-dep-859db88c56   1         1         1       106m
 ```
-
-ID-, IPs, etc. will be different from your deployment.
