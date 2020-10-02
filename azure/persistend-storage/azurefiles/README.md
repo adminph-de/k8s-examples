@@ -25,9 +25,9 @@ It demonstrate persistent volume mount to a static created Azure StorrageAccount
 | .       | **README.md**                 | This Readme File                    |
 | .       | **azf-ps-static-secret.yaml** | K8s Secret YAML file                |
 | .       | **azf-ps-static.yaml**        | k8s Deployment YAML file            |
-| .       | **create.sh**                 | create new Azure Storrage Account   |
+| .       | **create.sh**                 | Create new Azure Storrage Account   |
 | wwwroot | **index.html**                | Examle content for Apache Webserver |
-| wwwroot | **clogo.png**                 | Examle content for Apache Webserver |
+| wwwroot | **logo.png**                  | Examle content for Apache Webserver |
 | wwwroot | **script.js**                 | Examle content for Apache Webserver |
 | wwwroot | **style.css**                 | Examle content for Apache Webserver |
 
